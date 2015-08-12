@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Welcome to Tweeter!</h1>
+  <p>Hello, world!</p>
+
+  <form action="/" method="post">
+    <input type="text" name="username" placeholder="enter your word">
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+
+<% if @tweets %>
+<div class="container">
+
+  <% @tweets.each do |tweet| %>
+<br><ul><li><%= tweet.text %></li></ul><br>
+  <% end %>
+
+</div>
+
+<% end %>
